@@ -1,20 +1,63 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CAS SEA Impact Tracker</title>
+  <title>CAS Tracker</title>
   <style>
-    body { font-family: sans-serif; background: #f3f4f6; padding: 40px; }
-    .container { max-width: 700px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);}
-    h1 { color: #1f2937; }
-    .cta-button { background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; }
+    /* Add styling for your floating button and form */
+    #casTrackerBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #0078d4;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #casTrackerPanel {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      width: 300px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to the CAS SEA Impact Tracker</h1>
-    <p>This mini-tool allows you to log CAS activities aligned with SDG goals and generate impact reports with ease.</p>
-    <a class="cta-button" href="#">Try Tracker Demo</a>
+  <!-- Floating button -->
+  <button id="casTrackerBtn">CAS Tracker</button>
+  
+  <!-- Form panel -->
+  <div id="casTrackerPanel">
+    <h2>Log CAS Activity</h2>
+    <input type="text" id="activityTitle" placeholder="Activity Title" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <select id="activityStrand" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+      <option>Creativity</option>
+      <option>Activity</option>
+      <option>Service</option>
+    </select>
+    <button id="logActivity" style="width: 100%; padding: 10px;">Log Activity</button>
   </div>
+
+  <script>
+    // Add JavaScript to handle interaction
+    document.getElementById('casTrackerBtn').addEventListener('click', function() {
+      const panel = document.getElementById('casTrackerPanel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    });
+
+    document.getElementById('logActivity').addEventListener('click', function() {
+      const title = document.getElementById('activityTitle').value;
+      const strand = document.getElementById('activityStrand').value;
+      alert(`Logged activity: ${title} (${strand})`);
+      // You can extend this code to log the data to a file, API, or database
+    });
+  </script>
 </body>
 </html>

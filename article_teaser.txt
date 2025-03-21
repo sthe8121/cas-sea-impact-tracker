@@ -1,7 +1,14 @@
-
-Title: From Ripples to Systems – How SDG-Aligned CAS Tracking Transforms IB Learning
-
-What if your CAS records could tell a bigger story?
-This mini tool helps you track impact across strands, SDG goals, and student growth – in real-time.
-
-Try it here → [Link]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAS SEA Impact Tracker</title>
+</head>
+<body>
+  <h1>From Ripples to Systems – How SDG-Aligned CAS Tracking Transforms IB Learning</h1>
+  <p>What if your CAS records could tell a bigger story?</p>
+  <p>This mini tool helps you track impact across strands, SDG goals, and student growth – in real-time.</p>
+  <p><a href="#">Try it here → [Link]</a></p>
+</body>
+</html>
